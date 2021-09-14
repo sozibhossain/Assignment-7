@@ -5,8 +5,10 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FakeStore</title>
+  <title>OriginStore</title>
   <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/fontawesome.css" />
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
@@ -20,21 +22,29 @@
 <body>
   <header></header>
   <main class="main">
+
+    <div class="title">
+      <h1>Welcome to origin store</h1>
+    </div>
+
+    <!-- search area -->
+
     <div class="search-field">
-      <div class="search-box">
-        <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
-          autocomplete="off" id="search-btn" onclick="loadProducts()">
-          Search
-        </button>
+      <input id="search-area" class="input-field" type="text" placeholder="search product"><button onclick="searchProduct()" id="button_area"  class="search-button">Search</button>
+    </div>
+
+    <div class="row">
+      <div class="col-md-9 col-lg-9 col-sm-7">
+        <div id="product-filde" class="">
       </div>
     </div>
     <div class="row">
       <div class="col-md-9 col-lg-9 col-sm-7">
         <div id="all-products" class="">
-          <h1></h1>
-        </div>
       </div>
+    </div>
+      <div id="product-detail">
+    </div>
       <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
         <div class="cart" id="my-cart">
           <table class="table">
@@ -50,7 +60,7 @@
             <tbody>
               <tr>
                 <th>Total Added-Products:</th>
-                <td>$ <span id="total-Products">0</span></td>
+                <td><span id="total-Products">0</span></td>
                 <td></td>
                 <td></td>
               </tr>
